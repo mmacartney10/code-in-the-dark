@@ -33,6 +33,7 @@
     "react-mixin": "3.0.0",
     "react-router": "1.0.0-rc3",
     "redux-devtools": "^3.0.1",
+    "run-sequence": "^1.1.5",
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0",
     "watchify": "3.4.0"

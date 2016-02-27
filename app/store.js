@@ -8,11 +8,17 @@ const CounterReducer = (state = [], action) => {
         {
           id: action.id,
           text: action.text,
-          info: [action.info]
+          info: [action.info],
+          idInUse: action.id
         }
       ]
     case 'SHOW_ITEM':
-      return action.item
+      return state.map(test =>
+        test.idInUse !== action.idInUse
+          ? Object.assign({}, test, { idInUse: action.idInUse })
+          : test
+      )
+
     default:
       return state
   }

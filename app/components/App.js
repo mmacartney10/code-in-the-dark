@@ -5,28 +5,17 @@ import List from './List'
 import Test from './Test'
 
 const App = React.createClass({
-  increment: function () {
-    store.dispatch({ type: 'INCREMENT' })
-  },
-
-  decement: function () {
-    store.dispatch({ type: 'DECREMENT' })
-  },
-
   render: function () {
     return (
-    <div>
-<<<<<<< HEAD
-        <Navigation />
-        <Counter value={store.getState()} onIncrement={this.increment} onDecrement={this.decement}/>
-=======
-        <List/>
-        <form>
-          <legend>Form</legend>
-          <Fieldset/>
-        </form>
+    <div className='container'>
+        <div className='side-bar'>
+          <List/>
+          <form className='side-bar__form'>
+            <legend>Form</legend>
+            <Fieldset/>
+          </form>
+        </div>
         <Test/>
->>>>>>> 353813d72b8babdfc9d10c98e3bd6eeaade9013d
       </div>
     )
   }

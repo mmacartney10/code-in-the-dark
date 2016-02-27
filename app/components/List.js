@@ -7,8 +7,10 @@ const Item = React.createClass({
   updateStore: function () {
     store.dispatch({
       type: 'SHOW_ITEM',
-      item: '0'
+      idInUse: this.props.id
     })
+
+    console.log(store.getState())
   },
 
   handleClick: function () {
@@ -17,7 +19,7 @@ const Item = React.createClass({
 
   render: function () {
     return (
-    <li key={ID++} onClick={this.handleClick} id={this.props.id}>
+    <li key={ID++} className='side-bar__item'onClick={this.updateStore} id={this.props.id}>
         {this.props.text} {this.props.id}
       </li>
     )
@@ -34,8 +36,8 @@ const List = React.createClass({
 
   render: function () {
     return (
-    <ul>
-        {store.getState().map(todo => <Item text={todo.text} id={todo.id} key={todo.id}/>)}
+    <ul className='side-bar__list'>
+        {store.getState().map(data => <Item text={data.text} id={data.id} key={data.id}/>)}
       </ul>
     )
   }
