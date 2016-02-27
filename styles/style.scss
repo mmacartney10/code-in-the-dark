@@ -1,0 +1,29 @@
+body {
+	margin: 0;
+}
+
+.nav {
+
+	&__container {
+		background: yellowgreen;
+		display: inline-block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		overflow: scroll;
+	}
+
+	&__list {
+	    margin: 0;
+	    padding: 0;
+	    display: inline-block;
+	}
+
+	&__item {
+		padding: 10px 20px;
+		cursor: pointer;
+	}
+}
+
+
