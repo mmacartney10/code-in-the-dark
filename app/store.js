@@ -1,30 +1,19 @@
 import { createStore } from 'redux'
 
-const CounterReducer = (state = [], action) => {
+const TimerReducer = (state = 10, action) => {
   switch (action.type) {
-    case 'ADD_TODO':
-      return [
-        ...state,
-        {
-          id: action.id,
-          text: action.text,
-          info: [action.info],
-          idInUse: action.id
-        }
-      ]
-    case 'SHOW_ITEM':
-      return state.map(test =>
-        test.idInUse !== action.idInUse
-          ? Object.assign({}, test, { idInUse: action.idInUse })
-          : test
-      )
-
+    case 'SET_TIME':
+      return {
+        time: action.time
+      }
     default:
-      return state
+      return {
+        time: state
+      }
   }
 }
 
-const store = createStore(CounterReducer)
+const store = createStore(TimerReducer)
 
 console.log(store.getState())
 

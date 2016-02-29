@@ -1,6 +1,6 @@
 ## Description
 
-Basic Redux counter example with React
+Building a code in the dark game with redux and reactjs
 
 ## To install:
 

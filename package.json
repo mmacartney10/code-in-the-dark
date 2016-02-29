@@ -14,6 +14,7 @@
     "babelify": "6.4.0",
     "browser-sync": "2.9.11",
     "browserify": "11.2.0",
+    "codemirror": "^5.12.0",
     "connect-history-api-fallback": "1.1.0",
     "firebase": "2.3.1",
     "gulp": "3.9.0",
@@ -34,6 +35,7 @@
     "react-router": "1.0.0-rc3",
     "redux-devtools": "^3.0.1",
     "run-sequence": "^1.1.5",
+    "tinymce": "^4.3.5",
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0",
     "watchify": "3.4.0"

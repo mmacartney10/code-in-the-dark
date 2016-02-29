@@ -6,13 +6,14 @@ import { Provider } from 'react-redux'
 // import createBrowserHistory from 'history/lib/createBrowserHistory'
 // import NotFound from './components/NotFound'
 
-import App from './components/App'
+// import Editor from './components/Editor'
+import Timer from './components/Timer'
 import store from './store'
 
 const render = () => {
   ReactDOM.render(
     <Provider store={store}>
-      <App/>
+      <Timer/>
     </Provider>,
     document.getElementById('main')
   )
