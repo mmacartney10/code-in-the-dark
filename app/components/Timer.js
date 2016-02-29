@@ -33,7 +33,7 @@ const Timer = React.createClass({
 
   startTimer: function () {
     if (this.state.timerStarted) return
-    this.interval = setInterval(this.tick, 100)
+    this.interval = setInterval(this.tick, 1000)
     this.setState({timerStarted: true})
   },
 
@@ -47,12 +47,15 @@ const Timer = React.createClass({
     this.stopTimer()
     this.setState({minutesRemaining: store.getState().time})
     this.setState({secondsRemaining: 0})
+    this.setState({inputValue: store.getState().time})
   },
 
   updateTime: function () {
+    var round = Math.round(this.state.inputValue)
+
     store.dispatch({
       type: 'SET_TIME',
-      time: this.state.inputValue
+      time: round
     })
     this.resetTimer()
   },
