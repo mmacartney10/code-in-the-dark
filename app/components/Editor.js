@@ -1,32 +1,12 @@
 import React from 'react'
 
-// const Timer = React.createClass({
-
-// })
-
-// const Image = React.createClass({
-
-// })
-
-// const Description = React.createClass({
-
-// })
-
-const Code = React.createClass({
-  render: function () {
-    return (
-    <textarea></textarea>
-    )
-  }
-})
-
 const Editor = React.createClass({
+  handleChange: function () {},
+
   render: function () {
+    this.handleChange()
     return (
-    <div>
-        <h1>This is a test</h1>
-        <Code/>
-      </div>
+    <div id='editor'></div>
     )
   }
 })

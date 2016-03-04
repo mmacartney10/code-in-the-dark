@@ -4,11 +4,25 @@
     <head>
         <meta charset='UTF-8'>
         <title>Test</title>
-        <link rel='stylesheet' href='/build/style.css'>
+        <link rel='stylesheet' type="text/css" href='/build/style.css'>
+        </style>
     </head>
 
     <body>
         <div id='main'></div>
-        <script src='/build/main.js'></script>
+        <div id='editor'></div>
     </body>
+
+    <script src='/build/main.js'></script>
+    <script src="/build/ace.js"></script>
+    <script src="/build/mode-html.js"></script>
+    <script src="/build/theme-monokai.js"></script>
+    <script>
+        var editor = ace.edit('editor');
+        editor.setTheme('ace/theme/monokai');
+        editor.getSession().setMode('ace/mode/html');
+        editor.getSession().setTabSize(2);
+        editor.setShowPrintMargin(false);
+    </script>
+
 </html>

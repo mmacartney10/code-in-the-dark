@@ -27,7 +27,7 @@ const Timer = React.createClass({
   resetSecondsAtEndOfMinute: function () {
     if (this.state.secondsRemaining < 0 && this.state.minutesRemaining !== 0) {
       this.setState({minutesRemaining: this.state.minutesRemaining - 1})
-      this.setState({secondsRemaining: 60})
+      this.setState({secondsRemaining: 59})
     }
   },
 
